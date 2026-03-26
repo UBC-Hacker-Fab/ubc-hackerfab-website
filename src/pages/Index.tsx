@@ -7,6 +7,7 @@ import CapabilitiesSection from '@/components/CapabilitiesSection';
 import Sponsors from '@/components/Sponsors';
 import InterestForm from '@/components/InterestForm';
 import Footer from '@/components/Footer';
+import ConferencePosterPopup from '@/components/ConferencePosterPopup';
 
 const Index = () => {
   // Lock scrollbar on page load and smoothly enable it
@@ -27,6 +28,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-ubc-blue">
       <Header />
+      <ConferencePosterPopup />
       <HeroSection />
       <MissionSection />
       <CapabilitiesSection />

@@ -1,6 +1,6 @@
-import React from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import React from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import {
   Accordion,
   AccordionContent,
@@ -12,30 +12,35 @@ const FAQ = () => {
   const faqData = [
     {
       question: "What is HackerFab and what do you do?",
-      answer: "HackerFab is developing open-source microfabrication machines and processes to build conventionally expensive and inaccessible hardware from scratch. We're making semiconductor fabrication tools and processes more accessible by using first principles manufacturing approaches. We are not alone in this, and UBC's Hackerfab is a node of CMU's hackerfab inspired by Sam Zeloof and his projects."
+      answer:
+        "We are developing open-source microfabrication machines and processes to build conventionally expensive and inaccessible hardware from scratch. We are a node of CMU's HackerFab, originally inspired by Sam Zeloof and his garage projects.",
     },
     {
       question: "Who can join the team and what qualifications do I need?",
-      answer: "We're looking for a small number of passionate students across various disciplines including mechanical engineering, electrical engineering, physics, and software development. Since our team is small, you'll have significant control over what you work on. THe work is divided into teams, which determine what specific project (i.e. tool for fabrication) you will work on. No specific qualifications are required - we value dedication and smart thinking over credentials. Because of the nature of our team, you will also end up getting hands on engineering experience, doing everything from designing the projects to actually building them out."
+      answer:
+        "We're looking for a small number of passionate students across various disciplines including mechanical engineering, electrical engineering, physics, and software development. Since our team is small, you'll have significant control over what you work on. The work is divided into teams, which determine what specific project (i.e. tool for fabrication) you will work on. No specific qualifications are required - we value dedication and smart thinking over credentials. Because of the nature of our team, you will also end up getting hands on engineering experience, doing everything from designing the projects to actually building them out.",
     },
     {
       question: "What kind of projects will I work on?",
-      answer: "You'll work on building chips from scratch using our open-source fabrication tools. This includes developing lithography stepper for projecting patterns of design onto silicon, tube furnace for heating up gases to +1000 degrees in order to dope silicon, reactive ion etcher. These are just a few of the projects we have active. Over time, more will be added as we move towards the goal of having a complete fabrication process with enough percision and tools to make everything from transistors to more complicated chips."
+      answer:
+        "You'll work on building chips from scratch using our open-source fabrication tools. This includes developing lithography stepper for projecting patterns of design onto silicon, tube furnace for heating up gases to +1000 degrees in order to dope silicon, reactive ion etcher. These are just a few of the projects we have active. Over time, more will be added as we move towards the goal of having a complete fabrication process with enough precision and tools to make everything from transistors to more complicated ICs.",
     },
     {
       question: "How does the application process work?",
-      answer: "The application process starts with our interest form, which should take about 10 minutes to complete. Based on your responses, we'll reach out with next steps. The process is designed to understand your interests, skills, and how you'd like to contribute to our mission. When we reach out, we might set up an interview or ask further questions; depends on you individual answers. We know this is a bit unconventional for a design team, but that is because hackerfab in unconventional by nature."
+      answer:
+        "The application process starts with our interest form, which should take about 10 minutes to complete. Based on your responses, we'll reach out with next steps. The process is designed to understand your interests, skills, and how you'd like to contribute to our mission. When we reach out, we might set up an interview or ask further questions; depends on you individual answers and role.",
     },
     {
       question: "Are there any competitions?",
-      answer: "While there are no competitions, we believe external deadlines are good pressure to help us stay on track and stay motivated. We will be participating in MERC, or the Multidisciplinary Undergraduate Research Conference at UBC every March to present our research and what we have built. There will also be internal deadlines that team members will be encouraged to follow so everyone stays motivated."
-    }
+      answer:
+        "While there are no competitions, we believe external deadlines are good forcing functions for making rapid progress. We will be participating in the Multidisciplinary Undergraduate Research Conference (MURC) at UBC every March to present our research and what we have built. Future plans with other HackerFab nodes around the world might include competitions, bounties, and/or inter-university research conferences.",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-ubc-blue">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-32 px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -53,8 +58,8 @@ const FAQ = () => {
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {faqData.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
+              <AccordionItem
+                key={index}
                 value={`item-${index}`}
                 className="border border-ubc-slate/30 rounded-lg bg-ubc-blue/30 backdrop-blur-sm px-6"
               >

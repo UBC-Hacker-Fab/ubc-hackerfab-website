@@ -29,6 +29,16 @@ const sponsors: Sponsor[] = [
     url: "https://www.1517fund.com/",
     logoSrc: "/images/1517.jpg",
   },
+  {
+    name: "UBC MURC",
+    url: "https://students.ubc.ca/career/events-workshops/multidisciplinary-undergraduate-research-conference/",
+    logoSrc: "/images/ubc_murc.jpg",
+  },
+  {
+    name: "UBC SBME",
+    url: "https://bme.ubc.ca/",
+    logoSrc: "/images/ubc_sbme.jpg",
+  },
   // Add more sponsors here …
 ];
 
@@ -65,7 +75,7 @@ const SponsorTile: React.FC<{ sponsor: Sponsor }> = ({ sponsor }) => {
       href={sponsor.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative inline-block p-6 rounded-lg border border-ubc-slate/30 backdrop-blur-sm bg-ubc-blue/30 shadow-[0_4px_20px_-10px_rgba(139,170,173,0.4)] transition-transform duration-200 ease-out"
+      className="group relative inline-block p-6 rounded-lg border border-ubc-slate/30 backdrop-blur-sm bg-[#001a38] shadow-[0_4px_20px_-10px_rgba(139,170,173,0.4)] transition-transform duration-200 ease-out"
       style={{
         transform: `perspective(600px) rotateX(${pos.y * 0.1}deg) rotateY(${-pos.x * 0.1}deg) translateX(${pos.x * 0.3}px) translateY(${pos.y * 0.3}px)`,
       }}
@@ -92,21 +102,38 @@ const SponsorSection: React.FC = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => entries[0].isIntersecting && setVisible(true),
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => sectionRef.current && observer.disconnect();
   }, []);
 
   return (
-    <section id="sponsors" className="pt-32 pb-16 px-6 relative overflow-hidden">
+    <section
+      id="sponsors"
+      className="pt-32 pb-16 px-6 relative overflow-hidden"
+    >
       {/* Decorative background (unchanged) */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-full h-full">
-          <svg className="w-full h-full opacity-5" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <svg
+            className="w-full h-full opacity-5"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
             <defs>
-              <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
-                <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#8BAAAD" strokeWidth="0.5" />
+              <pattern
+                id="grid"
+                width="8"
+                height="8"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 8 0 L 0 0 0 8"
+                  fill="none"
+                  stroke="#8BAAAD"
+                  strokeWidth="0.5"
+                />
               </pattern>
             </defs>
             <rect x="0" y="0" width="100" height="100" fill="url(#grid)" />
@@ -114,7 +141,12 @@ const SponsorSection: React.FC = () => {
         </div>
         <div className="absolute bottom-0 left-0 w-full h-32 opacity-10">
           <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
-            <path d="M0,0 L50,0 C70,0 70,20 90,20 L200,20 C220,20 220,40 240,40 L600,40 C620,40 620,20 640,20 L800,20 C820,20 820,50 840,50 L1200,50" stroke="#F4FFF8" strokeWidth="1" fill="none" />
+            <path
+              d="M0,0 L50,0 C70,0 70,20 90,20 L200,20 C220,20 220,40 240,40 L600,40 C620,40 620,20 640,20 L800,20 C820,20 820,50 840,50 L1200,50"
+              stroke="#F4FFF8"
+              strokeWidth="1"
+              fill="none"
+            />
             <circle cx="240" cy="40" r="4" fill="#8BAAAD" />
             <circle cx="640" cy="20" r="4" fill="#8BAAAD" />
             <circle cx="840" cy="50" r="4" fill="#8BAAAD" />
@@ -130,7 +162,9 @@ const SponsorSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className={`max-w-4xl mx-auto transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+        <div
+          className={`max-w-4xl mx-auto transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}
+        >
           {/* Flexbox: centers partial rows */}
           <div className="flex flex-wrap justify-center gap-12">
             {sponsors.map((s) => (
