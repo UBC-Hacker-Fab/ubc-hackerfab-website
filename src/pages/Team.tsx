@@ -11,46 +11,12 @@ import {
   TestTube,
   BarChart,
   TrendingUp,
-  Link,
 } from "lucide-react";
 import InterestForm from "@/components/InterestForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const Team = () => {
-  const currentMembers = [
-    {
-      name: "Anush Mutyala",
-      role: "Co-Founder",
-      linkedin: "https://www.linkedin.com/in/anushmutyala/",
-      imageUrl: "/images/headshots/Anush.png",
-    },
-    {
-      name: "Marwa Attaii",
-      role: "Co-Founder",
-      linkedin: "https://www.linkedin.com/in/attaiimarwa/",
-      imageUrl: "/images/headshots/Marwa.jpg",
-    },
-    {
-      name: "Matthew Lee",
-      role: "Sputtering Lead",
-      linkedin: "https://www.linkedin.com/in/matthew-lee-835045264/",
-      imageUrl: "/images/headshots/Matthew.jpg",
-    },
-    {
-      name: "Jason Kwok",
-      role: "Annealing Lead",
-      linkedin: "https://www.linkedin.com/in/jasonkwok475/",
-      imageUrl: "/images/headshots/Jason.jpg",
-    },
-    {
-      name: "Iana Gerasimenko",
-      role: "Software Lead",
-      linkedin: "https://www.linkedin.com/in/iana-gerasimenko/",
-      imageUrl: "/images/headshots/Iana.jpeg",
-    },
-  ];
-
   const teamRoles = [
     {
       title: "Lithography Team",
@@ -168,64 +134,15 @@ const Team = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            <div className="bg-card border border-border rounded-lg p-4">
-              <div className="aspect-[4/3] rounded-md border-2 border-dashed border-ubc-slate/40 flex items-center justify-center text-center px-6">
-                <div>
-                  <img
-                    src="/images/team-2026.jpg"
-                    alt="HackerFab team"
-                    className="w-full h-full object-cover rounded-md"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-card border border-border rounded-lg p-6 self-start">
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
-                {currentMembers.map((member) => {
-                  const initials = member.name
-                    .split(" ")
-                    .map((part) => part[0])
-                    .join("")
-                    .slice(0, 2)
-                    .toUpperCase();
-
-                  return (
-                    <div key={member.name} className="text-center">
-                      <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="group inline-flex flex-col items-center"
-                        aria-label={`${member.name} LinkedIn`}
-                      >
-                        <div className="w-20 h-20 rounded-full overflow-hidden border border-ubc-slate/40 bg-ubc-slate/20 flex items-center justify-center text-ubc-mint font-semibold">
-                          {member.imageUrl ? (
-                            <img
-                              src={member.imageUrl}
-                              alt={member.name}
-                              className="w-full h-full object-cover"
-                            />
-                          ) : (
-                            initials
-                          )}
-                        </div>
-                        <p className="text-sm text-ubc-mint mt-3 group-hover:text-ubc-slate transition-colors">
-                          {member.name}
-                        </p>
-                        <p className="text-xs text-ubc-mint/70">
-                          {member.role}
-                        </p>
-                        <span className="inline-flex items-center gap-1 text-xs text-ubc-slate mt-2">
-                          <Link className="w-3 h-3" />
-                        </span>
-                      </a>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto bg-card border border-border rounded-lg p-4">
+            <img
+              src="/images/team-2026.jpg"
+              alt="Vancouver HackerFab team, 2026-2027 season"
+              className="w-full h-auto rounded-md"
+            />
+            <p className="mt-3 text-center text-sm tracking-widest text-ubc-mint/70">
+              2026-2027 Season
+            </p>
           </div>
         </div>
       </section>
