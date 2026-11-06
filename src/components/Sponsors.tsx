@@ -39,6 +39,11 @@ const sponsors: Sponsor[] = [
     url: "https://bme.ubc.ca/",
     logoSrc: "/images/ubc_sbme.jpg",
   },
+  {
+    name: "UBC AMPEL",
+    url: "https://www.ampel.ubc.ca/",
+    logoSrc: "/images/ampel-logo.gif",
+  },
   // Add more sponsors here …
 ];
 

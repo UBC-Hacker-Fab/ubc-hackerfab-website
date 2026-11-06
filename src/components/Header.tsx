@@ -16,11 +16,11 @@ const Header = () => {
             className="hidden md:flex items-center gap-8 text-ubc-mint hover:text-white transition-colors"
           >
             <img
-              src="/images/logo.png"
-              alt="UBC HackerFab logo"
+              src="/images/vanhf-logo.png"
+              alt="Vancouver HackerFab logo"
               className="h-9 w-9 object-contain"
             />
-            <span className="font-aldrich text-lg">UBC HackerFab</span>
+            <span className="font-aldrich text-lg">Vancouver HackerFab</span>
           </Link>
 
           {/* Navigation Links */}
@@ -44,6 +44,16 @@ const Header = () => {
               }`}
             >
               Team
+            </Link>
+            <Link
+              to="/sponsors"
+              className={`font-medium transition-colors ${
+                isActive("/sponsors")
+                  ? "text-white border-b-2 border-ubc-slate pb-1"
+                  : "text-ubc-mint hover:text-white"
+              }`}
+            >
+              Sponsors
             </Link>
             <Link
               to="/faq"

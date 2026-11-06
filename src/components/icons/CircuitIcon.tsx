@@ -14,7 +14,7 @@ export const CircuitIcon: React.FC<CircuitIconProps> = ({
   height = 24,
 }) => (
   <img
-    src="/images/logo.png"   // adjust to your file location
+    src="/images/vanhf-logo.png"   // adjust to your file location
     alt="logo"
     width={width}
     height={height}

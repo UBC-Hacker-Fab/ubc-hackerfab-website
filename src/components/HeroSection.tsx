@@ -225,7 +225,7 @@ const HeroSection: React.FC = () => {
               <CircuitIcon className="w-12 h-12 md:w-16 md:h-16 text-ubc-slate mr-4 animate-pulse-slow" />
               <div className="flex flex-col">
                 <span className="text-xs md:text-base text-ubc-mint tracking-widest">
-                  UNIVERSITY OF BRITISH COLUMBIA'S
+                  VANCOUVER'S
                 </span>
                 <div className="h-0.5 w-full bg-ubc-slate/50"></div>
               </div>
@@ -297,6 +297,19 @@ const HeroSection: React.FC = () => {
           >
             <span className="relative z-10 flex items-center">
               View Research Poster
+              <span className="ml-2 transform group-hover:translate-x-1 transition-transform">
+                ↗
+              </span>
+            </span>
+          </a>
+          <a
+            href="/sponsorship-package-2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-8 py-4 border-2 border-ubc-mint/60 text-ubc-mint font-medium hover:bg-ubc-mint/10 transition-all"
+          >
+            <span className="relative z-10 flex items-center">
+              Sponsorship Package
               <span className="ml-2 transform group-hover:translate-x-1 transition-transform">
                 ↗
               </span>

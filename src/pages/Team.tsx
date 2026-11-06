@@ -164,7 +164,7 @@ const Team = () => {
               Current Members
             </h2>
             <p className="text-ubc-mint/80 mt-3 max-w-2xl mx-auto">
-              Meet the students currently bringing up the UBC HackerFab.
+              Meet the students currently bringing up the Vancouver HackerFab.
             </p>
           </div>
 
@@ -173,7 +173,7 @@ const Team = () => {
               <div className="aspect-[4/3] rounded-md border-2 border-dashed border-ubc-slate/40 flex items-center justify-center text-center px-6">
                 <div>
                   <img
-                    src="/images/team picture.jpg"
+                    src="/images/team-2026.jpg"
                     alt="HackerFab team"
                     className="w-full h-full object-cover rounded-md"
                   />

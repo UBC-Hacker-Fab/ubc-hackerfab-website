@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { CircuitIcon } from "./icons/CircuitIcon";
 
 const Footer: React.FC = () => {
@@ -57,7 +58,7 @@ const Footer: React.FC = () => {
                   HACKER<span className="text-ubc-slate">FAB</span>
                 </div>
                 <div className="text-xs text-ubc-mint/60 tracking-widest">
-                  UNIVERSITY OF BRITISH COLUMBIA
+                  VANCOUVER
                 </div>
               </div>
             </div>
@@ -89,13 +90,13 @@ const Footer: React.FC = () => {
                 <span className="w-1 h-1 bg-ubc-slate mr-2 group-hover:bg-ubc-mint transition-colors"></span>
                 Projects
               </a>
-              <a
-                href="#sponsors"
+              <Link
+                to="/sponsors"
                 className="text-ubc-mint/70 hover:text-ubc-mint transition-colors inline-flex items-center group"
               >
                 <span className="w-1 h-1 bg-ubc-slate mr-2 group-hover:bg-ubc-mint transition-colors"></span>
                 Sponsors
-              </a>
+              </Link>
               <a
                 href="#interest"
                 className="text-ubc-mint/70 hover:text-ubc-mint transition-colors inline-flex items-center group"
@@ -167,7 +168,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-8 pt-6 border-t border-ubc-slate/20 flex flex-col md:flex-row justify-between items-center text-ubc-mint/50 text-xs">
           <p>
-            &copy; {new Date().getFullYear()} HackerFab UBC. All rights
+            &copy; {new Date().getFullYear()} Vancouver HackerFab. All rights
             reserved.
           </p>
           <p className="mt-2 md:mt-0">
